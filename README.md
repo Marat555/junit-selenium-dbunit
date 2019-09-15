@@ -3,6 +3,82 @@ junit-selenium-dbunit
 
 Maven template for automated testing with JUnit, Selenium and managing database state with DbUnit.
 
+## DbUnit
+
+For managing database state I used [dbunit-plus](https://github.com/mjeanroy/dbunit-plus).
+
+Add database connection configuration to annotation @DbUnitConnection in DriverBase class.
+
+Example:
+
+```java
+@DbUnitConnection(url = "jdbc:postgresql://localhost:5432/test", user = "deep", password = "123")
+public class DriverBase {
+  ...
+}
+```
+
+Add file for inserting to database to /resources/dbunit/xml. Example of file:
+
+```xml
+	<?xml version="1.0" encoding="UTF-8"?>
+    <dataset>
+    	<person id="1" name="David"/>
+    	<person id="2" name="George"/>
+    	<person id="3" name="Freddy"/>
+    	<person id="4" name="Steven"/>
+    </dataset>
+```
+
+Here are the available annotations:
+
+@DbUnitDataSet: define dataset (or directory containing dataset files) to load (can be used on package, entire class or a method).
+@DbUnitInit: define SQL script to execute before any dataset insertion (can be used on package or entire class).
+@DbUnitSetup: define DbUnit setup operation (can be used on package, entire class or a method).
+@DbUnitTearDown: define DbUnit tear down operation (can be used on package, entire class or a method).
+Example:
+
+```java
+@RunWith(SeleniumRunner.class)
+public class CampaignsPageIT extends DriverBase {
+    @BeforeClass
+    public static void setUp() {
+        instantiateDriverObject();
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        closeDriverObjects();
+    }
+
+    @After
+    public void afterEachMethod() {
+        clearCookies();
+    }
+
+    private ExpectedCondition<Boolean> pageSizeEquals(final String size) {
+        return driver -> driver.findElement(By.cssSelector("form#TemplateBackupForm > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(4) > div > span:nth-of-type(2) > span > ul > li:nth-of-type(3) > a")).getText().equals(size);
+    }
+
+    @Test
+    @DbUnitDataSet("/dbunit/xml/sampleData.xml")
+    @DbUnitSetup(DbUnitOperation.INSERT)
+    @DbUnitTearDown(DbUnitOperation.DELETE)
+    public void pagingTest() throws Exception {
+        WebDriver driver = getDriver();
+        driver.get("https://10.20.3.138");
+        AuthPage authPage = new AuthPage();
+        authPage.fillLoginForm("default@user.com", "123").submitLogin();
+        WebDriverWait wait = new WebDriverWait(driver, 30, 100);
+        wait.until(pageSizeEquals("100"));
+    }
+}
+```
+
+##JUnit-Selenium 
+
+As maven template, I used [Selenium-Maven-Template](https://github.com/Ardesco/Selenium-Maven-Template), but I made some changes in code and pom.xml replacing TestNg to JUnit, adding some and fixing dependencies conflicts in pom.xml.
+
 1. Open a terminal window/command prompt
 2. Clone this project.
 3. `cd junit-selenium-dbunit` (Or whatever folder you cloned it into)
