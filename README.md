@@ -21,13 +21,13 @@ public class DriverBase {
 Add file for inserting to database to /resources/dbunit/xml. Example of file:
 
 ```xml
-	<?xml version="1.0" encoding="UTF-8"?>
-    <dataset>
-    	<person id="1" name="David"/>
-    	<person id="2" name="George"/>
-    	<person id="3" name="Freddy"/>
-    	<person id="4" name="Steven"/>
-    </dataset>
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <person id="1" name="David"/>
+    <person id="2" name="George"/>
+    <person id="3" name="Freddy"/>
+    <person id="4" name="Steven"/>
+</dataset>
 ```
 
 Here are the available annotations:
@@ -76,7 +76,7 @@ public class CampaignsPageIT extends DriverBase {
 }
 ```
 
-##JUnit-Selenium 
+## JUnit-Selenium 
 
 As maven template, I used [Selenium-Maven-Template](https://github.com/Ardesco/Selenium-Maven-Template), but I made some changes in code and pom.xml replacing TestNg to JUnit, adding some and fixing dependencies conflicts in pom.xml.
 
