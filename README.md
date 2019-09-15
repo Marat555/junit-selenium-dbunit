@@ -32,10 +32,10 @@ Add file for inserting to database to /resources/dbunit/xml. Example of file:
 
 Here are the available annotations:
 
-@DbUnitDataSet: define dataset (or directory containing dataset files) to load (can be used on package, entire class or a method).
-@DbUnitInit: define SQL script to execute before any dataset insertion (can be used on package or entire class).
-@DbUnitSetup: define DbUnit setup operation (can be used on package, entire class or a method).
-@DbUnitTearDown: define DbUnit tear down operation (can be used on package, entire class or a method).
+@DbUnitDataSet: define dataset (or directory containing dataset files) to load (can be used on package, entire class or a method).<br />
+@DbUnitInit: define SQL script to execute before any dataset insertion (can be used on package or entire class).<br />
+@DbUnitSetup: define DbUnit setup operation (can be used on package, entire class or a method).<br />
+@DbUnitTearDown: define DbUnit tear down operation (can be used on package, entire class or a method).<br />
 
 Example:
 
