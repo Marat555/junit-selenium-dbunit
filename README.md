@@ -78,7 +78,7 @@ public class CampaignsPageIT extends DriverBase {
 
 ## JUnit-Selenium 
 
-As maven template, I used [Selenium-Maven-Template](https://github.com/Ardesco/Selenium-Maven-Template), but I made some changes in code and pom.xml replacing TestNg to JUnit, adding some and fixing dependencies conflicts in pom.xml.
+As maven template, I used [Selenium-Maven-Template](https://github.com/Ardesco/Selenium-Maven-Template), but I made some changes in code and pom.xml replacing TestNg to JUnit, adding and fixing dependencies conflicts in pom.xml.
 
 1. Open a terminal window/command prompt
 2. Clone this project.
