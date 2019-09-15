@@ -1,4 +1,4 @@
-package com.lucysecurity.lucy.listeners;
+package com.maratbadykov.selenium.listeners;
 
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunListener;
@@ -11,7 +11,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import static com.lucysecurity.lucy.DriverBase.getDriver;
+import static com.maratbadykov.selenium.DriverBase.getDriver;
 
 public class SeleniumRunListener extends RunListener {
 

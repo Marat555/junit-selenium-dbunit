@@ -1,4 +1,4 @@
-package com.lucysecurity.lucy.config;
+package com.maratbadykov.selenium.config;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.Proxy;
@@ -8,8 +8,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static com.lucysecurity.lucy.config.DriverType.FIREFOX;
-import static com.lucysecurity.lucy.config.DriverType.valueOf;
+import static com.maratbadykov.selenium.config.DriverType.FIREFOX;
+import static com.maratbadykov.selenium.config.DriverType.valueOf;
 import static org.openqa.selenium.Proxy.ProxyType.MANUAL;
 import static org.openqa.selenium.remote.CapabilityType.PROXY;
 

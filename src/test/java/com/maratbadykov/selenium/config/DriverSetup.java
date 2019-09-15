@@ -1,4 +1,4 @@
-package com.lucysecurity.lucy.config;
+package com.maratbadykov.selenium.config;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;

@@ -1,4 +1,4 @@
-package com.lucysecurity.lucy.config;
+package com.maratbadykov.selenium.config;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;

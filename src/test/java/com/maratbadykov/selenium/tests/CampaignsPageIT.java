@@ -1,12 +1,12 @@
-package com.lucysecurity.lucy.tests;
+package com.maratbadykov.selenium.tests;
 
 import com.github.mjeanroy.dbunit.core.annotations.DbUnitDataSet;
 import com.github.mjeanroy.dbunit.core.annotations.DbUnitSetup;
 import com.github.mjeanroy.dbunit.core.annotations.DbUnitTearDown;
 import com.github.mjeanroy.dbunit.core.operation.DbUnitOperation;
-import com.lucysecurity.lucy.DriverBase;
-import com.lucysecurity.lucy.SeleniumRunner;
-import com.lucysecurity.lucy.pageObjects.AuthPage;
+import com.maratbadykov.selenium.DriverBase;
+import com.maratbadykov.selenium.SeleniumRunner;
+import com.maratbadykov.selenium.pageObjects.AuthPage;
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;

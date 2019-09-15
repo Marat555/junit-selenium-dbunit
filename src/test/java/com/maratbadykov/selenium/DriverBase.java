@@ -1,12 +1,9 @@
-package com.lucysecurity.lucy;
+package com.maratbadykov.selenium;
 
 import com.github.mjeanroy.dbunit.core.annotations.DbUnitConnection;
-import com.github.mjeanroy.dbunit.integration.junit4.DbUnitJunitRunner;
 import com.github.mjeanroy.dbunit.integration.junit4.DbUnitRule;
-import com.lucysecurity.lucy.config.DriverFactory;
-import com.lucysecurity.lucy.listeners.SeleniumRunListener;
+import com.maratbadykov.selenium.config.DriverFactory;
 import org.junit.Rule;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.ArrayList;

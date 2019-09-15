@@ -1,6 +1,6 @@
-package com.lucysecurity.lucy.pageObjects;
+package com.maratbadykov.selenium.pageObjects;
 
-import com.lucysecurity.lucy.DriverBase;
+import com.maratbadykov.selenium.DriverBase;
 import com.lazerycode.selenium.util.Query;
 import org.openqa.selenium.By;
 

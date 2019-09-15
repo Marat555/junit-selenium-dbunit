@@ -1,7 +1,6 @@
-package com.lucysecurity.lucy;
+package com.maratbadykov.selenium;
 
-import com.github.mjeanroy.dbunit.integration.junit4.DbUnitJunitRunner;
-import com.lucysecurity.lucy.listeners.SeleniumRunListener;
+import com.maratbadykov.selenium.listeners.SeleniumRunListener;
 import org.junit.runner.notification.RunNotifier;
 import org.junit.runners.BlockJUnit4ClassRunner;
 import org.junit.runners.model.InitializationError;
