@@ -36,6 +36,7 @@ Here are the available annotations:
 @DbUnitInit: define SQL script to execute before any dataset insertion (can be used on package or entire class).
 @DbUnitSetup: define DbUnit setup operation (can be used on package, entire class or a method).
 @DbUnitTearDown: define DbUnit tear down operation (can be used on package, entire class or a method).
+
 Example:
 
 ```java
