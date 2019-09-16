@@ -7,7 +7,7 @@ Maven template for automated testing with JUnit, Selenium and managing database 
 
 For managing database state I used [dbunit-plus](https://github.com/mjeanroy/dbunit-plus).
 
-Add database connection configuration to annotation @DbUnitConnection in DriverBase class.
+Add database connection configuration annotation `@DbUnitConnection` in `DriverBase` class.
 
 Example:
 
@@ -18,7 +18,7 @@ public class DriverBase {
 }
 ```
 
-Add file for inserting to database to /resources/dbunit/xml. Example of file:
+Add a file with data set for insertion to the database to `/resources/dbunit/xml`. Example of file:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -32,10 +32,10 @@ Add file for inserting to database to /resources/dbunit/xml. Example of file:
 
 Here are the available annotations:
 
-@DbUnitDataSet: define dataset (or directory containing dataset files) to load (can be used on package, entire class or a method).<br />
-@DbUnitInit: define SQL script to execute before any dataset insertion (can be used on package or entire class).<br />
-@DbUnitSetup: define DbUnit setup operation (can be used on package, entire class or a method).<br />
-@DbUnitTearDown: define DbUnit tear down operation (can be used on package, entire class or a method).<br />
+`@DbUnitDataSet`: define dataset (or directory containing dataset files) to load (can be used on package, entire class or a method).<br />
+`@DbUnitInit`: define SQL script to execute before any dataset insertion (can be used on package or entire class).<br />
+`@DbUnitSetup`: define DbUnit setup operation (can be used on package, entire class or a method).<br />
+`@DbUnitTearDown`: define DbUnit tear down operation (can be used on package, entire class or a method).<br />
 
 Example:
 
@@ -102,7 +102,7 @@ All dependencies should now be downloaded and the example test will have run in 
 
 ### Anything else?
 
-Yes you can specify which browser to use by using one of the following switches:
+You can specify which browser to use by using one of the following switches:
 
 - -Dbrowser=firefox
 - -Dbrowser=chrome
